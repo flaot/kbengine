@@ -255,6 +255,9 @@ memoryStreamPool_("DebugHelperMemoryStream")
 {
 	g_pDebugHelperSyncHandler = new DebugHelperSyncHandler();
 	loseLoggerTime_ = timestamp();
+#if KBE_PLATFORM == PLATFORM_WIN32
+    system("CHCP 65001");//¸ü¸ÄcmdÎªutf-8±àÂë
+#endif
 }
 
 //-------------------------------------------------------------------------------------
