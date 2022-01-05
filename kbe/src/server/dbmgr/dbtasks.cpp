@@ -676,7 +676,7 @@ DBTaskCreateAccount::~DBTaskCreateAccount()
 bool DBTaskCreateAccount::db_thread_process()
 {
 	ACCOUNT_INFOS info;
-	success_ = DBTaskCreateAccount::writeAccount(pdbi_, accountName_, password_, postdatas_, info) && info.dbid > 0;
+	success_ = DBTaskCreateAccount::writeAccount(pdbi_, accountName_, password_, getdatas_, info) && info.dbid > 0;
 	return false;
 }
 
